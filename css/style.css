@@ -1466,13 +1466,13 @@ main {
   }
   header {
     justify-content: center;
-    width: 340px;
+    width: 300px;
   }
   main {
-    width: 340px;
+    width: 300px;
   }
   .container {
-    max-width: 340px;
+    max-width: 300px;
   }
   .main-home {
     height: 750px;
@@ -1483,14 +1483,14 @@ main {
     width: 300px;
   }
   .main-home-block-left-title {
-    width: 340px;
-    font-size: 30px;
+    width: 300px;
+    font-size: 25px;
   }
   .main-description-programs-card-text {
     font-size: 15px;
   }
   .img img{
-    width: 340px;
+    width: 300px;
   }
   .img h2{
     font-size: 20px;
@@ -1500,7 +1500,7 @@ main {
     top: 0;
     right: -100%;
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
     height: 100vh;
     background: #000b28;
     flex-direction: column;
@@ -1536,64 +1536,70 @@ main {
     transform: rotate(-45deg) translate(7px, -6px);
   }
   .main-description-block-left {
-    width: 368px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
   .main-description {
-    height: 2000px;
+    height: 1700px;
   }
   .main-description-block-left-text h1 {
-    font-size: 35px;
+    font-size: 25px;
   }
   .main-description-block-left-text p {
     width: auto;
+    font-size: 15px;
+    margin-bottom: 20px;
   }
 
   .main-description-block-left img {
     margin: 0;
     position: relative;
-    width: 368px;
+    width: 270px;
   }
   .main-description-programs {
     margin-top: 50px;
   }
   .main-description-programs h1 {
-    font-size: 35px;
+    font-size: 25px;
   }
   .main-description-programs-cards {
     gap: 20px;
     justify-content: center;
   }
   .main-description-programs-card-wrapper {
-    width: 300px;
+    width: 250px;
   }
   .main-description-programs-card-text {
-    width: 300px;
+    width: 250px;
   }
   .main-description-programs-card-html {
     margin: 0;
   }
+  .main-description-programs-card-title{
+    font-size: 20px;
+  }
   .main-team-block-left h1 {
-    font-size: 35px;
+    font-size: 25px;
   }
   .main-team-block-left p {
     width: 100%;
+    font-size: 15px;
   }
   .main-team {
     height: 1050px;
     flex-direction: column;
   }
   .main-reviews {
-    height: 2500px;
+    height: 2200px;
   }
   .main-team-block-left-cards {
     flex-direction: column;
   }
   .main-team-block-left {
-    width: 368px;
+    width: 300px;
   }
   .blur-main-home {
     width: 80%;
@@ -1607,9 +1613,26 @@ main {
   .main-team-block-right img {
     width: 300px;
   }
-  .main-team-block-left-card-nikita,
+  .main-home-block-left-list-text h2{
+    font-size: 18px;
+  }
+  .main-home-block-left-list-text p{
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: 0.5px;
+  }
+
+    .main-team-block-left-card-nikita,
   .main-team-block-left-card-ksenia {
-    width: 345px;
+    width: 280px;
+  }
+  .main-team-block-left-card-img {
+    width: 70px;
+    height: 70px;
+  }
+  .main-team-block-left-card-img img {
+    width: 70px;
+    height: 70px;
   }
   footer {
     width: auto;
@@ -1622,6 +1645,8 @@ main {
   }
   .main-reviews-rating-cards {
     gap: 40px;
+    width: 300px;
+    margin: 0;
     margin-top: 30px;
     flex-direction: column;
     justify-content: space-around;
@@ -1630,13 +1655,15 @@ main {
     justify-content: center;
   }
   .main-reviews-card-text {
-    width: 300px;
+    width: 230px;
+    font-size: 15px;
   }
   .main-reviews-card-user {
     width: 300px;
   }
   .main-reviews-card-user p {
-    font-size: 15px;
+    font-size: 10px;
+    display: none;
   }
   .main-reviews-card-user h3 {
     font-size: 15px;
@@ -1645,13 +1672,29 @@ main {
     width: 300px;
   }
   .main-team-block-left-card-developer h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .main-form-inputs input {
-    width: 333px;
+    width: 280px;
+    height: 60px;
   }
   .main-reviews-card {
-    width: 368px;
+    width: 300px;
+  }
+  .main-form-buttons button{
+    height: 60px;
+    font-size: 20px;
+    border: #fff solid 2px;
+  }
+  .course-card-left .main-description-block-left-text h1{
+    font-size: 20px;
+  }
+  .course-p{
+    font-size: 15px;
+  }
+  .main-form-button-img-wrapper{
+    width: 20px;
+    height: 20px;
   }
   .main-reviews-card-user-data img {
     width: 50px;
@@ -1661,10 +1704,10 @@ main {
     height: 600px;
   }
   .main-form-title {
-    font-size: 35px;
+    font-size: 25px;
   }
   .main-form-text {
-    width: 368px;
+    width: 300px;
   }
   footer {
     flex-direction: column;
