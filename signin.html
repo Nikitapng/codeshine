@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon" />
+    <link type="Image/x-icon" href="img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="font/NeueMachina/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>CodeShine</title>
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div class="container">
+        <header>
+          <div class="header">
+            <div class="header-logo">
+              <a href="index.html"><img src="img/logo.svg" alt="CodeShine" /></a>
+            </div>
+            <div class="header-menu">
+              <div class="header-menu-links-buttons">
+                <form action="index.html">
+                  <button class="header-menu-button-entrance">
+                    На главную
+                    <img
+                      src="img/pixelarticons_chevron-left.svg"
+                      alt="arrow"
+                      class="header-menu-button-entrance-img"
+                    />
+                  </button>
+                </form>
+                
+              </div>
+            </div>
+            <div class="header-menu header-menu-burger">
+              <div class="header-menu-links-buttons">
+                <form action="index.html">
+                  <button class="header-menu-button-entrance">
+                    На главную
+                    <img
+                      src="img/pixelarticons_chevron-left.svg"
+                      alt="arrow"
+                      class="header-menu-button-entrance-img"
+                    />
+                  </button>
+                </form>
+                
+                
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          
+          <section class="main-form main-form-login">
+            <form action="#">
+              <h1 class="main-form-title">Регистрация профиля</h1>
+              <p class="main-form-text">
+                Чтобы начать пользоваться курсом, зарегестрируйте свой личный аккаунт на нашей платформе              </p>
+              <div class="main-form-inputs">
+                <input type="text" name="name" placeholder="Логин" required />
+                <input type="email" id="email" placeholder="E-mail*" required />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Пароль"                required
+                  pattern="(?=.*\d).{8,}"
+                  title="Пароль должен содержать минимум 8 символов"
+                  
+                />
+              </div>
+              <div class="main-form-buttons">
+                <button>
+                  войти
+                  <div class="main-form-button-img-wrapper">
+                    <img
+                      src="img/Star-7.svg"
+                      alt="star"
+                      class="main-form-button-img"
+                    />
+                    <img
+                      src="img/Star-8.svg"
+                      alt="star"
+                      class="main-form-button-img-hover"
+                    />
+                  </div>
+                </button>
+              </div>
+            </form>
+          </section>
+        </main>
+
+        <footer>
+          <div class="footer-logo">
+            <a href="#"><img src="img/logo.svg" alt="CodeShine" /></a>
+          </div>
+          <div class="footer-menu">
+            <div class="footer-copyright-buttons">
+              <p class="footer-copyright">
+                CodeShine. 2025. Все права защищены
+              </p>
+              
+            </div>
+          </div>
+        </footer>
+        
+      </div>
+    </div>
+    <script>
+      // Бургер-меню
+      const burgerMenu = document.createElement('div');
+      burgerMenu.className = 'burger-menu';
+      burgerMenu.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+      `;
+      document.querySelector('.header').appendChild(burgerMenu);
+      
+      const burger = document.querySelector('.burger-menu');
+      const headerMenu = document.querySelector('.header-menu-burger');
+      
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        headerMenu.classList.toggle('active');
+      });
+      
+      // Закрытие меню при клике вне его
+      document.addEventListener('click', (e) => {
+        if (!headerMenu.contains(e.target) && !burger.contains(e.target)) {
+          burger.classList.remove('active');
+          headerMenu.classList.remove('active');
+        }
+      });
+      
+      // Закрытие меню при клике на ссылку
+      document.querySelectorAll('.header-menu-link a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          headerMenu.classList.remove('active');
+        });
+      });
+      
+      // Плавный скролл
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      </script>
+      <script>
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition > 100) { // Измените значение на нужное (в пикселях)
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+      </script>
+  </body>
+</html>
