@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon" />
+    <link type="Image/x-icon" href="img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styleBlock.css" />
+    <link
+      href="font/NeueMachina/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>CodeShine</title>
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div class="container">
+        <header>
+          <div class="header">
+            <div class="header-logo">
+              <a href="index.html"
+                ><img src="img/logo.svg" alt="CodeShine"
+              /></a>
+            </div>
+            <div class="header-menu">
+              <div class="header-menu-links-buttons">
+                <form action="course.html">
+                  <button class="header-menu-button-entrance">
+                    К курсу
+                    <img
+                      src="img/chevron-left.svg"
+                      alt="arrow"
+                      class="header-menu-button-entrance-img"
+                    />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <h1 class="main-title">
+            Блок 2. Базовая верстка<br />
+            на HTML
+          </h1>
+          <section class="main-html">
+            <h2 class="main-section-title">
+              Простейшая разметка в HTML выглядит следующим образом:
+            </h2>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code1.svg"
+                alt="Разметка в HTML"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">Давайте разберем данный пример:</p>
+            <div>
+              <p class="main-section-text">
+                Простейшая HTML-страница состоит минимум из трёх тегов:
+                &lt;<span>html</span>&gt;, &lt;<span>head</span>&gt; и
+                &lt;<span>body</span>&gt;.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Тег &lt;<span>html</span>&gt; располагается сразу после
+                  объявления типа документа (doctype) и содержит все остальные
+                  теги, включая &lt;<span>head</span>&gt; и
+                  &lt;<span>body</span>&gt;.
+                </li>
+                <li class="main-section-text-item">
+                  Тегу &lt;<span>html</span>&gt; обычно добавляют важный атрибут
+                  <span>lang</span>(сокращение от английского
+                  «<span>language</span>»), в котором задаётся язык документа.
+                  Наш сайт будет русскоязычным, поэтому в lang пропишем такое
+                  значение:
+                </li>
+              </ul>
+            </div>
+            <img
+              src="img/code2.svg"
+              alt="Язык сайта"
+              class="main-section-img main-section-img-code-size-min"
+            />
+            <ul class="main-section-text-items">
+              <li class="main-section-text-item">
+                Тег &lt;<span>head</span>&gt; хранит важную служебную
+                информацию, а в теге &lt;<span>body</span>&gt; хранится
+                содержание страницы, которое отображается в окне браузера. Все
+                тексты и картинки мы будем добавлять внутрь
+                &lt;<span>body</span>&gt;. В документе теги <span>head</span> и
+                <span>body</span> могут быть использованы только один раз!
+              </li>
+            </ul>
+          </section>
+          <section class="main-tag-title">
+            <h2 class="main-section-title">Тег title, заголовок страницы</h2>
+            <img
+              src="img/image1.svg"
+              alt="Пример заголовка страницы"
+              class="main-section-img main-section-img-size-title"
+            />
+            <p class="main-section-text">
+              За заголовок во вкладке браузера отвечает парный тег
+              &lt;<span>title</span>&gt;, внутри которого содержится название
+              страницы.
+            </p>
+            <p class="main-section-text">
+              Обычно советуют использовать заголовок от 50 до 80 символов. Такое
+              ограничение существует из-за того, что поисковые системы не могут
+              показать больше символов в качестве заголовка страницы в
+              результатах поисковой выдачи. Заголовок внутри тега
+              &lt;<span>title</span>&gt; отобразится во вкладке в браузере.
+            </p>
+            <p class="main-section-text">
+              А вот пример использования &lt;<span>title</span>&gt; в коде:
+            </p>
+            <img
+              src="img/code3.svg"
+              alt="Пример title"
+              class="main-section-img main-section-img-code-size-min-3"
+            />
+          </section>
+          <section class="main-tag-link">
+            <h2 class="main-section-title">Тег link</h2>
+            <p class="main-section-text">
+              Тег &lt;<span>link</span>&gt; позволяет подключать файлы стилей,
+              шрифты, подсказывать браузерам следующую (или предыдущую) страницу
+              статьи. Для этого у него есть атрибут href в котором задаётся
+              адрес стилевого файла, а значение stylesheet атрибута rel говорит
+              браузеру, что мы подключаем именно стили, а не что-то другое.
+              Самый распространённый пример — подключение файла CSS к
+              HTML-странице:
+            </p>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code4.svg"
+                alt="Пример тега link"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+          <section class="main-tag-header-main-footer">
+            <h2 class="main-section-title">Теги header, main, footer</h2>
+            <p class="main-section-text">
+              Кроме уникального основного содержимого страницы, у нас есть
+              повторяющиеся на других страницах вводная часть и заключительная
+              часть. Вводную часть страницы, которую чаще называют «шапкой»,
+              описывает тег &lt;<span>header</span>&gt;. Аналогично ему,
+              заключительную часть страницы, или «подвал», описывает тег
+              &lt;<span>footer</span>&gt;.
+            </p>
+            <img
+              src="img/code5.svg"
+              alt="Пример тегов header, main, footer"
+              class="main-section-img main-section-img-code-size-min-5"
+            />
+            <div>
+              <p class="main-section-text">
+                Обычно на странице появляется по одному тегу
+                &lt;<span>header</span>&gt; и &lt;<span>footer</span>&gt;, но их
+                может быть и больше.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Тег &lt;<span>header</span>&gt; — это не только шапка сайта с
+                  логотипом и меню, он может использоваться, например, и как
+                  «шапка» какой-нибудь статьи или раздела сайта. Конечно, в
+                  случае со статьёй &lt;<span>header</span>&gt; называют не
+                  «шапкой», а вводной частью, в которой могут содержаться
+                  заголовки, оглавление и так далее.
+                </li>
+                <li class="main-section-text-item">
+                  С &lt;<span>footer</span>&gt; ситуация аналогичная. В
+                  привычном понимании это подвал сайта, с копирайтами,
+                  контактной информацией и так далее. Но
+                  &lt;<span>footer</span>&gt; может использоваться и в других
+                  разделах сайта. Например, внутри статьи в «подвале» можно
+                  разместить дополнительную информацию: данные об авторе,
+                  дополнительные ссылки и так далее.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="main-section-text">
+                Тег &lt;<span>main</span>&gt; используется только один раз для
+                обозначения основного содержимого страницы. Это делает структуру
+                документа более понятной и семантически правильной.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Тег &lt;<span>main</span>&gt; — это специальный элемент,
+                  который используется для обозначения самого важного
+                  содержимого на веб-странице. Представь, что у тебя есть книга,
+                  и тег &lt;<span>main</span>&gt; — это главная часть книги, где
+                  находится основной текст, без вступлений, примечаний и других
+                  дополнительных материалов.
+                </li>
+              </ul>
+            </div>
+            <p class="main-section-text">
+              Основная структура страницы выглядит так:
+            </p>
+            <img
+              src="img/image2.svg"
+              alt="Основная структура станицы"
+              class="main-section-img"
+            />
+          </section>
+          <section class="main-tag-h1-h6">
+            <h2 class="main-section-title">Теги h1-h6, заголовки в HTML</h2>
+            <p class="main-section-text">
+              Для создания основной структуры текста используют заголовки.
+              В HTML существует целое семейство заголовочных тегов: от
+              &lt;<span>h1</span>&gt; до &lt;<span>h6</span>&gt;. Тег
+              &lt;<span>h1</span>&gt; обозначает самый важный заголовок
+              (заголовок верхнего уровня),
+              а тег &lt;<span>h6</span>&gt; обозначает подзаголовок самого
+              нижнего уровня. Буква «<span>h</span>» в названии тега — это
+              первая буква английского «<span>heading</span>», а то есть
+              заголовок.
+            </p>
+            <p class="main-section-text">
+              На практике в текстах редко встречаются подзаголовки ниже третьего
+              уровня. Поэтому чаще всего используются
+              теги &lt;<span>h1</span>&gt;, &lt;<span>h2</span>&gt; и &lt;<span>h3</span>&gt;:
+            </p>
+            <img
+              src="img/code6.svg"
+              alt="Пример тегов h1-h3"
+              class="main-section-img main-section-img-code-size-min-6"
+            />
+            <p class="main-section-text">
+              Поисковые системы придают особое значение заголовкам, также
+              правильно расставленные заголовки важны для доступности документа.
+              Поэтому нужно учиться грамотно использовать заголовки.
+            </p>
+            <p class="main-section-text">
+              Заголовок &lt;<span>h1</span>&gt; — самый важный на странице.
+              В него нужно включать текст, который в целом описывает содержание
+              страницы. Очень важно, чтобы заголовок первого уровня на странице
+              был только один.
+            </p>
+            <p class="main-section-text">
+              Пример заголовков от &lt;<span>h1</span>&gt; до
+              &lt;<span>h6</span>&gt;:
+            </p>
+            <img
+              src="img/image3.svg"
+              alt="Пример тегов h1-h6"
+              class="main-section-img main-section-img-size"
+            />
+          </section>
+          <section class="main-tag-p">
+            <h2 class="main-section-title">Тег p, параграф</h2>
+            <p class="main-section-text">
+              Основную структуру текста создают с помощью заголовков, а более
+              мелкую выстраивают с помощью параграфов (или абзацев). Параграф —
+              это отдельный блок текста, который обычно содержит одну или
+              несколько связанных мыслей. Представь, что ты пишешь статью или
+              рассказ, и каждый новый абзац начинается с новой строки — вот для
+              этого и нужен тег &lt;<span>p</span>&gt;.
+            </p>
+            <div class="image-container">
+              <img
+                src="img/code7.svg"
+                alt="Пример тега p"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+          <section class="main-tag-section">
+            <h2 class="main-section-title">Тег section, разделы страницы</h2>
+            <p class="main-section-text">
+              Тег &lt;<span>section</span>&gt; используется для создания
+              логических разделов на веб-странице. Представь, что у тебя есть
+              книга, и каждая глава или раздел в этой книге посвящен
+              определённой теме. Тег &lt;<span>section</span>&gt; помогает
+              разделить содержимое страницы на такие тематические блоки.
+            </p>
+            <div class="image-container">
+              <img
+                src="img/code8.svg"
+                alt="Пример тега section"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+          <section class="main-tag-nav">
+            <h2 class="main-section-title">Тег nav, навигация по сайту</h2>
+            <p class="main-section-text">
+              Тег &lt;<span>nav</span>&gt; используется для создания блока
+              навигации на веб-странице. Этот блок содержит ссылки, которые
+              помогают пользователям перемещаться между разделами сайта или
+              внутри одной страницы. Представь, что это меню, которое помогает
+              найти нужную информацию быстрее.
+            </p>
+            <div>
+              <p class="main-section-text">
+                Теги &lt;<span>ul</span>&gt; и &lt;<span>li</span>&gt;:
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  &lt;<span>ul</span>&gt;: Это тег для создания неупорядоченного
+                  списка (unordered list). Он используется, когда порядок
+                  элементов не важен. В примере ниже он используется для
+                  создания списка ссылок внутри тега &lt;<span>nav</span>&gt;.
+                </li>
+                <li class="main-section-text-item">
+                  &lt;<span>li</span>&gt;: Это тег для создания элемента списка
+                  (list item). Каждый элемент списка оборачивается в
+                  тег &lt;<span>li</span>&gt;. В примере ниже каждая ссылка
+                  навигации является элементом списка.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="main-section-text">Тег &lt;<span>a</span>&gt;:</p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Тег &lt;<span>a</span>&gt; используется для создания
+                  гиперссылок, которые позволяют пользователям переходить на
+                  другие страницы или разделы внутри одной страницы. Когда тег
+                  &lt;<span>a</span>&gt; используется внутри тега
+                  &lt;<span>li</span>&gt;, это означает, что каждый элемент
+                  списка (&lt;<span>li</span>&gt;) содержит ссылку.
+                </li>
+              </ul>
+              <p class="main-section-text">
+                <span>!Гиперссылка</span> — это кликабельный элемент, который
+                перенаправляет пользователя на другую страницу или раздел
+                текущей страницы.
+              </p>
+            </div>
+            <div>
+              <p class="main-section-text">
+                Атрибуты тега &lt;<span>a</span>&gt;:
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  <span>href</span>: Это основной атрибут
+                  тега &lt;<span>a</span>&gt;, который указывает адрес (URL), на
+                  который будет вести ссылка.
+                  Например, <span>href</span>=&#34;ссылка&#34; или <span>href</span>=&#34;#about&#34; для
+                  перехода к разделу на той же странице.
+                </li>
+              </ul>
+            </div>
+            <div class="image-container">
+              <img
+                src="img/code9.svg"
+                alt="Пример тега nav"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+          <section class="main-tag-div">
+            <h2 class="main-section-title">Тег div, базовый блочный элемент</h2>
+            <p class="main-section-text">
+              Тег &lt;<span>div</span>&gt; — это универсальный контейнер,
+              который используется для группировки элементов на веб-странице.
+              Представь, что это коробка, в которую можно положить разные вещи:
+              текст, изображения, другие контейнеры и т.д. Эта "коробка"
+              помогает организовать и стилизовать контент.
+            </p>
+            <div class="image-container">
+              <img
+                src="img/code10.svg"
+                alt="Пример тега div"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">
+              Когда использовать тег &lt;<span>div</span>&gt;:
+            </p>
+            <div>
+              <p class="main-section-text main-section-text-bold">
+                1. Когда нужно создать контейнер для группировки элементов:
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Что это значит? Представь, что у тебя есть несколько элементов
+                  на странице, например, текст, изображения и кнопки.
+                  Тег  &lt;<span>div</span>&gt; помогает объединить их в одну
+                  "коробку". Это удобно, когда нужно управлять всеми этими
+                  элементами сразу.
+                </li>
+                <li class="main-section-text-item">
+                  Пример: Ты хочешь, чтобы текст и изображение всегда были рядом
+                  друг с другом. Оберни их в &lt;<span>div</span>&gt;>, и они
+                  будут вместе.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="main-section-text main-section-text-bold">
+                2. Когда требуется применить стили или скрипты к группе
+                элементов:
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Что это значит? Иногда нужно изменить внешний вид или
+                  поведение нескольких элементов одновременно. С помощью CSS
+                  можно задать стили для всего &lt;<span>div</span>&gt;, а с
+                  помощью JavaScript — добавить интерактивность.
+                </li>
+                <li class="main-section-text-item">
+                  Пример: Ты хочешь, чтобы все элементы
+                  внутри &lt;<span>div</span>&gt; имели одинаковый фон или чтобы
+                  они исчезали при нажатии на кнопку. Оберни их
+                  в &lt;<span>div</span>&gt; и применяй стили или скрипты к
+                  этому контейнеру.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="main-section-text main-section-text-bold">
+                3. Когда необходимо создать сложный макет страницы:
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Что это значит? Сложный макет — это когда страница разделена
+                  на несколько частей, например, на колонки или секции.
+                  Тег &lt;<span>div</span>&gt; помогает организовать эти части,
+                  делая страницу более структурированной и удобной для
+                  восприятия.
+                </li>
+                <li class="main-section-text-item">
+                  Пример: Ты хочешь создать макет с тремя колонками: одна для
+                  меню, вторая для основного контента и третья для рекламы.
+                  Используй &lt;<span>div</span>&gt; для каждой колонки, чтобы
+                  легко управлять их расположением и стилями.
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="main-tag-img">
+            <h2 class="main-section-title">Тег img, изображение</h2>
+            <p class="main-section-text">
+              Тег &lt;<span>img</span>&gt; используется для вставки изображений
+              на веб-страницу. Представь, что ты хочешь добавить картинку на
+              свою страницу — фотографию, логотип или иконку. Тег
+              &lt;<span>img</span>&gt; помогает это сделать.
+            </p>
+            <div class="image-container">
+              <img
+                src="img/code11.svg"
+                alt="Пример тега img"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text main-section-text-bold">
+                Атрибуты: У тега &lt;<span>img</span>&gt; есть несколько важных
+                атрибутов, которые помогают управлять изображением:
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  <span>src</span>: Указывает путь к изображению. Это может быть
+                  ссылка на файл на твоём сервере или в интернете.
+                </li>
+                <li class="main-section-text-item">
+                  <span>alt</span>: Альтернативный текст, который отображается,
+                  если изображение не загружается, как на примере ниже:
+                </li>
+              </ul>
+            </div>
+            <img
+              src="img/image16.svg"
+              alt="Пример ошибки загрузки файла img"
+              class="main-section-img main-section-img-size-error"
+            />
+          </section>
+          <section class="main-navigation">
+            <h2 class="main-section-title">Навигация по блокам страницы</h2>
+            <p class="main-section-text">
+              Навигация по блокам страницы позволяет пользователям быстро
+              перемещаться между различными частями веб-страницы, не прокручивая
+              её вручную. Это особенно полезно для длинных страниц, где
+              информация разделена на несколько разделов.
+            </p>
+            <p class="main-section-text">
+              Чтобы реализовать переход между различными блоками на странице,
+              необходимо:
+            </p>
+            <div>
+              <p class="main-section-text">
+                <span
+                  >Шаг 1: Присвоить каждому разделу уникальный
+                  идентификатор</span
+                >
+              </p>
+              <p class="main-section-text">
+                Каждый раздел на вашей странице должен иметь уникальный
+                идентификатор (ID). Это делается с помощью атрибута id.
+                Например, если у вас есть три раздела: "О нас", "Услуги" и
+                "Контакты", вы можете присвоить им следующие ID:
+              </p>
+            </div>
+            <div class="image-container">
+              <img
+                src="img/code12.svg"
+                alt="Пример навигации по id"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                <span
+                  >Шаг 2: Создать навигационное меню с ссылками-якорями</span
+                >
+              </p>
+              <p class="main-section-text">
+                Теперь, когда у вас есть разделы с уникальными ID, вы можете
+                создать навигационное меню, которое позволит пользователям
+                быстро перемещаться между этими разделами. Для этого
+                используются ссылки-якоря. Ссылка-якорь — это ссылка, которая
+                начинается с символа #, за которым следует ID раздела.
+              </p>
+            </div>
+            <div class="image-container">
+              <img
+                src="img/code13.svg"
+                alt="Пример навигации по ссылки-якоря"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+
+          <section class="main-back-and-next">
+            <form action="block1.html">
+              <button class="header-menu-button-entrance">
+                Назад
+                <img
+                  src="img/chevron-left.svg"
+                  alt="arrow"
+                  class="header-menu-button-entrance-img"
+                />
+              </button>
+            </form>
+            <form action="block3.html">
+              <button class="header-menu-button-registration">
+                Следующий блок
+                <div class="header-menu-button-registration-img-wrapper">
+                  <img
+                    src="img/chevron-right.svg"
+                    alt="star"
+                    class="header-menu-button-registration-img"
+                  />
+                  <img
+                    src="img/chevron-right-blue.svg"
+                    alt="star"
+                    class="header-menu-button-registration-img-hover"
+                  />
+                </div>
+              </button>
+            </form>
+          </section>
+        </main>
+
+        <footer>
+          <div class="footer-logo">
+            <a href="index.html"><img src="img/logo.svg" alt="CodeShine" /></a>
+          </div>
+          <div class="footer-menu">
+            <div class="footer-copyright-buttons">
+              <p class="footer-copyright">
+                CodeShine. 2025. Все права защищены
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      // Плавный скролл
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 100) {
+          // Измените значение на нужное (в пикселях)
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

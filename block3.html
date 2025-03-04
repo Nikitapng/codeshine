@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon" />
+    <link type="Image/x-icon" href="img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styleBlock.css" />
+    <link
+      href="font/NeueMachina/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>CodeShine</title>
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div class="container">
+        <header>
+          <div class="header">
+            <div class="header-logo">
+              <a href="index.html"
+                ><img src="img/logo.svg" alt="CodeShine"
+              /></a>
+            </div>
+            <div class="header-menu">
+              <div class="header-menu-links-buttons">
+                <form action="course.html">
+                  <button class="header-menu-button-entrance">
+                    К курсу
+                    <img
+                      src="img/chevron-left.svg"
+                      alt="arrow"
+                      class="header-menu-button-entrance-img"
+                    />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <h1 class="main-title">
+            Блок 3. Стилизация сайта<br />
+            при помощи CSS
+          </h1>
+          <section class="main-">
+            <p class="main-section-text">
+              <span>CSS (Cascading Style Sheets)</span> — это язык, который
+              используется для оформления веб-страниц. С его помощью можно
+              изменять внешний вид HTML-документов, например, менять цвета,
+              шрифты, размеры и расположение элементов.
+            </p>
+            <h2 class="main-section-title">CSS-правила</h2>
+            <p class="main-section-text">
+              CSS состоит из правил, которые говорят браузеру, как должны
+              выглядеть различные части веб-страницы. Каждое правило состоит из
+              двух основных частей: селектора и блока свойств.
+            </p>
+            <img
+              src="img/code14.svg"
+              alt="Пример селектора и блока свойств"
+              class="main-section-img main-section-img-size-14"
+            />
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title">Селекторы</h2>
+            <p class="main-section-text">
+              Селектор — это часть CSS-правила, которая указывает, к каким
+              HTML-элементам будут применены стили. Селектор находится в начале
+              правила, до фигурных скобок {}.
+            </p>
+            <p class="main-section-text">Пример:</p>
+            <div class="image-container">
+              <img
+                src="img/code15.svg"
+                alt="Пример селектора"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">
+              В этом примере тег <span>p</span> — это селектор. Он указывает,
+              что стили будут применены ко всем абзацам (&lt;<span>p</span>&gt;)
+              на странице.
+            </p>
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title">Классы</h2>
+            <p class="main-section-text">
+              Классы в CSS позволяют применять стили к нескольким элементам на
+              веб-странице, независимо от их типа. Это делает управление внешним
+              видом элементов более гибким и удобным.
+            </p>
+            <p class="main-section-text">
+              Чтобы задать класс для HTML-элемента, используется атрибут
+              <span>class</span>. Вы можете добавить этот атрибут к любому тегу.
+              Например:
+            </p>
+            <div class="image-container">
+              <img
+                src="img/code16.svg"
+                alt="Пример классов"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">
+              В CSS можно задавать стили только для элементов с определённым
+              классом. Для этого используется селектор по классу, который
+              пишется так .имя-класса, например:
+            </p>
+            <div class="image-container">
+              <img
+                src="img/code17.svg"
+                alt="Пример классов"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title">Множественные классы</h2>
+            <p class="main-section-text">
+              Вы можете применять несколько классов к одному элементу. Это
+              позволяет комбинировать различные стили. Для этого просто
+              перечислите классы через пробел в атрибуте <span>class</span>:
+            </p>
+            <p class="main-section-text">
+              Допустим, у вас на сайте есть разные типы уведомлений:
+            </p>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code18.svg"
+                alt="Пример нескольких классов"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">
+              У них все стили кроме фона одинаковые. Фон обычных сообщений
+              серый, фон ошибок красный. Стили для этих уведомлений можно
+              организовать так:
+            </p>
+            <div class="image-container">
+              <img
+                src="img/code19.svg"
+                alt="Пример нескольких классов в css"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">
+              Класс <span>alert</span> с общими стилями есть у всех сообщений.
+              Класс <span>alert-error</span> с частными стилями есть только
+              у ошибок.
+              <span class="main-section-text-help"
+                >Помните: несколько классов в атрибуте class задаются через
+                пробел.</span
+              >
+            </p>
+            <p class="main-section-text">Вот так будет выглядеть результат:</p>
+            <img
+              src="img/image4.svg"
+              alt="Результат"
+              class="main-section-img main-section-image-14-size"
+            />
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title">Свойства и значения</h2>
+            <p class="main-section-text">
+              Каждое CSS-правило содержит блок свойств, который определяет, как
+              будет выглядеть элемент. Свойства записываются внутри фигурных
+              скобок { } и состоят из пары "<span>свойство: значение</span>".
+              Например:
+            </p>
+            <img
+              src="img/code20.svg"
+              alt="Пример свойств и значений"
+              class="main-section-img main-section-img-code-size-max-20"
+            />
+            <p class="main-section-text">
+              Здесь <span>color</span> и <span>font-size</span> — это свойства,
+              а <span>red</span> и <span>14px</span> — их значения.
+            </p>
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title">Распространенные свойства</h2>
+            <div>
+              <p class="main-section-text">
+                1. color — устанавливает цвет текста.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Можно задать цвет с помощью названия (например, blue),
+                  HEX-кода (например, #0066FF) или RGB-значения
+                  (например, rgb(0, 17, 255))
+                </li>
+              </ul>
+            </div>
+            <div class="image-container">
+              <img
+                src="img/code21.svg"
+                alt="Пример свойства color"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                2. font-size — задаёт размер шрифта.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Можно указать размер в пикселях (px), процентах (%), em или
+                  других единицах
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code22.svg"
+                alt="Пример свойства font-size"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                3. font-family — определяет тип шрифта.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Указывается название шрифта или семейство шрифтов. Можно
+                  перечислить несколько шрифтов через запятую.
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code23.svg"
+                alt="Пример свойства font-family"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                4. background-color — устанавливает цвет фона элемента.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Аналогично свойству color, можно использовать названия цветов,
+                  HEX-коды или RGB-значения
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code24.svg"
+                alt="Пример свойства background-color"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                5. background — комплексное свойство, которое позволяет задать
+                фон элемента, включая цвет, изображение, повторение и положение.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Можно указать несколько значений через пробел
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code25.svg"
+                alt="Пример свойства background"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                6. margin — задаёт внешние отступы элемента.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Можно указать одно значение для всех сторон, два значения
+                  (верх-низ и лево-право) или четыре значения (верх - top, право
+                  - right, низ - bottom, лево - left)
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code26.svg"
+                alt="Пример свойства margin"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                7. padding — задаёт внутренние отступы элемента.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Аналогично margin, можно указать одно, два или четыре значения
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code27.svg"
+                alt="Пример свойства padding"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                8. text-align — выравнивает текст внутри элемента.
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Возможные значения выравнивая: left(по левому краю), right(по
+                  правому краю), center(по центру), justify(по ширине)
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code28.svg"
+                alt="Пример свойства text-align"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                9. border-radius — Задаёт радиус скругления углов элемента
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Можно указать одно значение для всех углов или разные значения
+                  для каждого угла.
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code29.svg "
+                alt="Пример свойства border-radius"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                10. box-shadow — добавляет тень к элементу
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Задаётся горизонтальное и вертикальное смещение, размытие и
+                  цвет тени.
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code30.svg "
+                alt="Пример свойства box-shadow"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                11. width — устанавливает ширину элемента
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Можно задать в пикселях (px), процентах (%) или других
+                  единицах.
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code31.svg "
+                alt="Пример свойства width"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                12. height — устанавливает высоту элемента
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Аналогично width, можно задать в пикселях или процентах.
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code32.svg "
+                alt="Пример свойства height"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                13. position — определяет метод позиционирования элемента
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Возможные значения: static(позволяет элементу находиться в
+                  обычном его состоянии), relative(позиционируется в
+                  соответствии с нормальным потоком
+                  документа), absolute(удаляется из обычного потока документа, и
+                  для элемента в макете страницы не выделяется дополнительное
+                  пространство), fixed(фиксируется на одном
+                  месте), sticky(фиксируется на одном месте, но передвигается за
+                  скроллом).
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code33.svg "
+                alt="Пример свойства position"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <div>
+              <p class="main-section-text">
+                14. bottom — Задаёт смещение элемента снизу, если используется
+                с position: absolute или position: fixed
+              </p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Указывается значение смещения.
+                </li>
+              </ul>
+            </div>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code34.svg "
+                alt="Пример свойства botton"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title">Каскадирование</h2>
+            <p class="main-section-text">
+              Когда браузер отрисовывает страницу, он должен определить итоговый
+              вид каждого HTML-элемента. Для этого он собирает все CSS-правила,
+              которые относятся к каждому элементу, ведь на элемент могут влиять
+              сразу несколько CSS-правил. Например:
+            </p>
+            <img
+              src="img/code35.svg"
+              alt="Пример несколько CSS-правил"
+              class="main-section-img main-section-img-code-size-35"
+            />
+            <div>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  На этот элемент могут одновременно влиять CSS-правила
+                  по тегу p и по классу beloved-color из наших стилей, да ещё
+                  и CSS-правило по тегу p из браузерных стилей.
+                </li>
+                <li class="main-section-text-item">
+                  После того, как все правила для элемента собраны, браузер
+                  комбинирует все свойства из этих правил и применяет
+                  их к элементу. Если в наших стилях есть такой код:
+                </li>
+              </ul>
+            </div>
+            <img
+              src="img/code36.svg"
+              alt="Пример несколько CSS-правил"
+              class="main-section-img main-section-img-size-code-36"
+            />
+            <img
+              src="img/code37.svg"
+              alt="Пример несколько CSS-правил"
+              class="main-section-img main-section-img-code-size-33"
+            />
+            <p class="main-section-text">
+              То у нашего абзаца про цвет будет такой итоговый набор свойств
+              и значений
+            </p>
+          </section>
+          <section class="main-back-and-next">
+            <form action="block2.html">
+              <button class="header-menu-button-entrance">
+                Назад
+                <img
+                  src="img/chevron-left.svg"
+                  alt="arrow"
+                  class="header-menu-button-entrance-img"
+                />
+              </button>
+            </form>
+            <form action="block3.1.html">
+              <button class="header-menu-button-registration">
+                Следующий блок
+                <div class="header-menu-button-registration-img-wrapper">
+                  <img
+                    src="img/chevron-right.svg"
+                    alt="star"
+                    class="header-menu-button-registration-img"
+                  />
+                  <img
+                    src="img/chevron-right-blue.svg"
+                    alt="star"
+                    class="header-menu-button-registration-img-hover"
+                  />
+                </div>
+              </button>
+            </form>
+          </section>
+        </main>
+
+        <footer>
+          <div class="footer-logo">
+            <a href="index.html"><img src="img/logo.svg" alt="CodeShine" /></a>
+          </div>
+          <div class="footer-menu">
+            <div class="footer-copyright-buttons">
+              <p class="footer-copyright">
+                CodeShine. 2025. Все права защищены
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      // Плавный скролл
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 100) {
+          // Измените значение на нужное (в пикселях)
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

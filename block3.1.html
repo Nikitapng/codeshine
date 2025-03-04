@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon" />
+    <link type="Image/x-icon" href="img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styleBlock.css" />
+    <link
+      href="font/NeueMachina/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>CodeShine</title>
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div class="container">
+        <header>
+          <div class="header">
+            <div class="header-logo">
+              <a href="index.html"
+                ><img src="img/logo.svg" alt="CodeShine"
+              /></a>
+            </div>
+            <div class="header-menu">
+              <div class="header-menu-links-buttons">
+                <form action="course.html">
+                  <button class="header-menu-button-entrance">
+                    К курсу
+                    <img
+                      src="img/chevron-left.svg"
+                      alt="arrow"
+                      class="header-menu-button-entrance-img"
+                    />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <h1 class="main-title">
+            Блок 3.1. Стилизация сайта<br />
+            при помощии CSS. Флексы
+          </h1>
+          <section class="main-">
+            <h2 class="main-section-title">Основные термины</h2>
+            <p class="main-section-text">
+              <span>Flexbox</span> — инструмент построения крупных сеток
+              и микросеток.
+            </p>
+            <p class="main-section-text">
+              <span>Флекс-контейнер:</span> элемент, к которому применяется
+              свойство display: flex. Вложенные в него элементы подчиняются
+              правилам раскладки флексов.
+            </p>
+            <p class="main-section-text">
+              <span>Флекс-элемент:</span> элемент, вложенный во флекс-контейнер.
+            </p>
+            <img
+              src="img/image5.svg"
+              alt="Флекс-контейнер"
+              class="main-section-img main-section-image-size-code"
+            />
+            <p class="main-section-text">
+              <span>Основная ось:</span> основная направляющая флекс-контейнера,
+              вдоль которой располагаются флекс-элементы.
+            </p>
+            <p class="main-section-text">
+              <span>Поперечная (побочная, перпендикулярная) ось:</span> ось,
+              идущая перпендикулярно основной. Позже вы поймёте, для чего она
+              нужна.
+            </p>
+            <p class="main-section-text">
+              <span>Начало / конец основной оси:</span> точки в начале и в конце
+              основной оси соответственно. Это пригодится нам для выравнивания
+              флекс-элементов.
+            </p>
+            <p class="main-section-text">
+              <span>Начало / конец поперечной оси:</span> точки в начале и в
+              конце поперечной оси соответственно.
+            </p>
+            <img
+              src="img/image6.svg"
+              alt="Оси"
+              class="main-section-img main-sedisplayction-image-size-code"
+            />
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title">Свойства флекс-контейнера:</h2>
+            <h2 class="main-section-title-secondary">Display</h2>
+            <img
+              src="img/code38.svg"
+              alt="Пример Display"
+              class="main-section-img main-section-img-size-code-mini"
+            />
+            <p class="main-section-text">
+              Когда мы задаём какому-то элементу значение flex для
+              свойства display, мы превращаем этот элемент в флекс-контейнер.
+              Внутри него начинает действовать флекс-контекст, его дочерние
+              элементы начинают подчиняться свойствам флексбокса.
+            </p>
+            <img
+              src="img/image7.svg"
+              alt="Пример display: flex"
+              class="main-section-img main-section-image-size-code main-section-img-flex"
+            />
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title-secondary">Flex-Direction</h2>
+            <img
+              src="img/code39.svg"
+              alt="Пример Flex-Direction"
+              class="main-section-img main-section-img-size-code-mini"
+            />
+            <div>
+              <p class="main-section-text">Возможные значения:</p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  <span>row</span> (значение по умолчанию) — основная ось идёт
+                  горизонтально слева направо, поперечная ось идёт вертикально
+                  сверху вниз.
+                </li>
+                <li class="main-section-text-item">
+                  <span>row-reverse</span> — основная ось идёт горизонтально
+                  справа налево, поперечная ось идёт вертикально сверху вниз.
+                </li>
+                <li class="main-section-text-item">
+                  <span>column</span> — основная ось идёт вертикально сверху
+                  вниз, поперечная ось идёт горизонтально слева направо.
+                </li>
+                <li class="main-section-text-item">
+                  <span>column-reverse</span> — основная ось идёт вертикально
+                  снизу вверх, поперечная ось идёт горизонтально слева направо.
+                </li>
+              </ul>
+            </div>
+            <img
+              src="img/image8.svg"
+              alt="Пример Flex-Direction"
+              class="main-section-img main-section-image-size-code"
+            />
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title-secondary">Flex-Wrap</h2>
+            <img
+              src="img/code40.svg"
+              alt="Пример Flex-Wrap"
+              class="main-section-img main-section-img-size-code-mini"
+            />
+            <div>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  По умолчанию значение у свойства
+                  <span>flex-wrap</span> — <span>nowrap</span>. При этом
+                  флекс-элементы помещаются (или пытаются уместиться) в один ряд
+                  и не переносятся в новый ряд, даже если не влезают в размеры
+                  родителя.
+                </li>
+                <li class="main-section-text-item">
+                  Установив значение <span>wrap</span>, мы можем изменить это
+                  поведение, и флекс-элементы будут иметь возможность
+                  перенестись в новый ряд, если не влезают в одну линию в рамках
+                  родителя.
+                </li>
+                <li class="main-section-text-item">
+                  Ещё одно возможное значение — <span>wrap-reverse</span>. В
+                  этом случае элементы будут располагаться снизу вверх, заполнив
+                  собой сперва нижний ряд, а те, что не влезли, перепрыгнут в
+                  ряд выше.
+                </li>
+              </ul>
+            </div>
+            <img
+              src="img/image9.svg"
+              alt="Пример Flex-Wrap"
+              class="main-section-img main-section-image-size-code"
+            />
+          </section>
+
+          <section class="main-">
+            <h2 class="main-section-title-secondary">Flex-Flow</h2>
+            <p class="main-section-text">
+              Свойство flex-flow является сокращённым свойством для отдельных
+              свойств flex-direction и flex-wrap.
+            </p>
+            <img
+              src="img/code41.svg"
+              alt="Пример Flex-Flow"
+              class="main-section-img main-section-img-size-code-mini"
+            />
+            <p class="main-section-text">
+              Как и со всеми шорткатами, с этим стоит быть осторожным. Хоть он и
+              позволяет сэкономить пару строк кода, в случае переопределения
+              одного из значений придётся переписывать свойство целиком,
+              повторяя второе значение, которое не меняется. В таком случае
+              проще было бы иметь два отдельных свойства и менять значения
+              отдельно.
+            </p>
+            <img
+              src="img/image10.svg"
+              alt="Пример Flex-Flow"
+              class="main-section-img main-section-image-size-code"
+            />
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title-secondary">Justify-Content</h2>
+            <img
+              src="img/code42.svg"
+              alt="Пример Justify-Content"
+              class="main-section-img main-section-img-size-code-mini"
+            />
+            <p class="main-section-text">
+              Свойство позволяет выравнивать флекс-элементы внутри
+              флекс-контейнера по основной оси.
+            </p>
+            <div>
+              <p class="main-section-text">Возможные значения:</p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  <span>start</span> — элементы прижимаются к тому краю, откуда
+                  начинается чтение на том языке, на котором отображается сайт.
+                </li>
+                <li class="main-section-text-item">
+                  <span>end</span> — элементы прижимаются к краю,
+                  противоположному началу направления чтения на языке сайта.
+                </li>
+                <li class="main-section-text-item">
+                  <span>flex-start</span> — элементы прижимаются к краю, от
+                  которого начинается основная ось.
+                </li>
+                <li class="main-section-text-item">
+                  <span>flex-end</span> — элементы прижимаются к краю, у
+                  которого основная ось заканчивается.
+                </li>
+                <li class="main-section-text-item">
+                  <span>left</span> — элементы прижмутся к левому краю родителя.
+                </li>
+                <li class="main-section-text-item">
+                  <span>right</span> — элементы прижмутся к правому краю
+                  родителя.
+                </li>
+                <li class="main-section-text-item">
+                  <span>center</span> — элементы выстраиваются по центру
+                  родителя.
+                </li>
+                <li class="main-section-text-item">
+                  <span>space-between</span> — крайние элементы прижимаются к
+                  краям родителя, оставшиеся выстраиваются внутри контейнера
+                  равномерно, так, чтобы между ними были одинаковые отступы.
+                </li>
+                <li class="main-section-text-item">
+                  <span>space-around</span> — свободное пространство делится
+                  поровну между элементами и по половине от этой доли
+                  размещается по бокам от каждого элемента. Таким образом, между
+                  соседними элементами будет равное расстояние, а снаружи
+                  крайних элементов — по половине этого расстояния.
+                </li>
+                <li class="main-section-text-item">
+                  <span>space-evenly</span> — свободное место будет распределено
+                  так, чтобы расстояние между любыми двумя элементами было
+                  одинаковым и расстояние от крайних элементов до края было
+                  таким же.
+                </li>
+              </ul>
+            </div>
+            <img
+              src="img/image11.svg"
+              alt="Пример Justify-Content"
+              class="main-section-img main-section-image-size-code"
+            />
+          </section>
+          <section class="main-">
+            <h2 class="main-section-title-secondary">Align-Items</h2>
+            <img
+              src="img/code43.svg"
+              alt="Пример Align-Items"
+              class="main-section-img main-section-img-size-code-mini"
+            />
+            <div>
+              <p class="main-section-text">Возможные значения:</p>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  <span>stretch</span> (значение по умолчанию) — элементы
+                  растягиваются вдоль поперечной оси так, чтобы заполнить всего
+                  родителя. Это очень удобно, если вы делаете двухколоночный
+                  макет. Раньше приходилось при помощи разных костылей
+                  добиваться одинаковой высоты, а теперь достаточно сделать
+                  контейнер флексом, и колонки по умолчанию будут одной высоты.
+                </li>
+                <li class="main-section-text-item">
+                  <span>flex-start</span> или <span>start</span> — элементы
+                  выстраиваются у начала поперечной оси. Разница между ними лишь
+                  в том, что второе значение «уважает» направление чтения
+                  выбранного языка.
+                </li>
+                <li class="main-section-text-item">
+                  <span>flex-end</span> или <span>end</span> — элементы
+                  выстраиваются у конца поперечной оси. Разница между первым и
+                  вторым значениями аналогична предыдущему пункту.
+                </li>
+                <li class="main-section-text-item">
+                  <span>center</span> — элементы выстраиваются по центру
+                  поперечной оси.
+                </li>
+                <li class="main-section-text-item">
+                  <span>baseline</span> — элементы выравниваются по базовой
+                  линии текста. «Базовая линия» — baseline — воображаемая линия,
+                  проходящая по нижнему краю знаков шрифта (без учёта выносных
+                  элементов).
+                </li>
+              </ul>
+            </div>
+            <img
+              src="img/image12.svg"
+              alt="Пример Align-Items"
+              class="main-section-img main-section-image-size-code"
+            />
+          </section>
+          <section class="main-back-and-next">
+            <form action="block3.html">
+              <button class="header-menu-button-entrance">
+                Назад
+                <img
+                  src="img/chevron-left.svg"
+                  alt="arrow"
+                  class="header-menu-button-entrance-img"
+                />
+              </button>
+            </form>
+            <form action="practic.html">
+              <button class="header-menu-button-registration">
+                Следующий блок
+                <div class="header-menu-button-registration-img-wrapper">
+                  <img
+                    src="img/chevron-right.svg"
+                    alt="star"
+                    class="header-menu-button-registration-img"
+                  />
+                  <img
+                    src="img/chevron-right-blue.svg"
+                    alt="star"
+                    class="header-menu-button-registration-img-hover"
+                  />
+                </div>
+              </button>
+            </form>
+          </section>
+        </main>
+        <footer>
+          <div class="footer-logo">
+            <a href="index.html"><img src="img/logo.svg" alt="CodeShine" /></a>
+          </div>
+          <div class="footer-menu">
+            <div class="footer-copyright-buttons">
+              <p class="footer-copyright">
+                CodeShine. 2025. Все права защищены
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      // Плавный скролл
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 100) {
+          // Измените значение на нужное (в пикселях)
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
