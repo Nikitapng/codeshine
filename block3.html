@@ -504,6 +504,133 @@
               и значений
             </p>
           </section>
+
+          <section class="main-">
+            <h2 class="main-section-title">Aдаптивная вёрстка</h2>
+            <p class="main-section-text">
+              Адаптивная вёрстка позволяет создать сайт, способный динамично
+              меняться в зависимости от устройства, на котором его открывают,
+              и размера его экрана. С помощью адаптивных сеток возможно сделать
+              дизайн, который легко перестраивается при необходимости.
+            </p>
+            <img
+              src="img/image17.svg"
+              alt="Пример медиавыражения"
+              class="main-section-img"
+            />
+            <p class="main-section-text">
+              То есть на экране смартфона сайт будет выглядеть иначе, чем
+              на экране ноутбука, чтобы пользователю было комфортно
+              взаимодействовать с интерфейсом. Медиавыражения меняют ширину
+              экрана, ориентацию устройства, настройки операционной системы
+              и многое другое.
+            </p>
+            <p class="main-section-text">
+              Любое медиавыражение начинается директивы <span>@media</span>,
+              её указание необходимо, чтобы выражение заработало.
+            </p>
+            <p class="main-section-text">
+              В <span>фигурных скобках</span> указывают характеристики —
+              условия, при которых медиавыражение меняет вид сайта
+              соответственно указанным свойствам.
+            </p>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code48.svg"
+                alt="Пример media"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">
+              Например, адаптация веб-версии для мобильных устройств будет
+              выглядеть так:
+            </p>
+            <img
+              src="img/image18.svg"
+              alt="Пример адаптива"
+              class="main-section-img"
+            />
+            <p class="main-section-text">
+              Пример использования медиавыражений для адаптивной вёрстки:
+            </p>
+            <p class="main-section-text">
+              Предположим, у нас есть макет сайта, который изначально разработан
+              для экранов с разрешением 1920px. Наша задача — адаптировать этот
+              дизайн для устройств с меньшими экранами, таких как планшеты
+              (768px) и смартфоны (480px). Для этого мы будем использовать
+              медиавыражения, чтобы изменять стили в зависимости от ширины
+              экрана.
+            </p>
+            <p class="main-section-text">
+              Сначала зададим базовые стили, которые будут применяться для
+              экранов с шириной 1920px.
+            </p>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code45.svg"
+                alt="Пример базовых стилей"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+            <p class="main-section-text">Адаптация для планшетов (768px)</p>
+            <p class="main-section-text">
+              Для экранов с шириной 768px (например, планшеты) изменяем
+              существующие стили
+            </p>
+            <img src="img/Arrow4.svg" alt="arrow" class="main-section-arrow" />
+            <div class="image-container">
+              <img
+                src="img/code46.svg"
+                alt="Пример стилей для разрешения 768px"
+                class="main-section-img main-section-img-code-size-max"
+              />
+            </div>
+          </section>
+
+          <section class="main-">
+            <h2 class="main-section-title">
+              Размеры экранов для адаптивной верстки
+            </h2>
+            <p class="main-section-text">
+              Контрольные точки по умолчанию принято использовать с
+              каноническими значениями плотности пикселей:
+            </p>
+            <div>
+              <ul class="main-section-text-items">
+                <li class="main-section-text-item">
+                  Мониторы full-hd — от 1920 px.
+                </li>
+                <li class="main-section-text-item">
+                  Мониторы низкого класса (не full-hd) — от 1280 px.
+                </li>
+                <li class="main-section-text-item">Нетбуки — от 1024 px.</li>
+                <li class="main-section-text-item">Планшеты — от 768 px.</li>
+                <li class="main-section-text-item">
+                  Мобильные устройства высокого класса (смартфоны) — от 320 px.
+                </li>
+              </ul>
+            </div>
+            <p class="main-section-text">
+              Наиболее удобный способ вручную проверить адаптивность сайта —
+              открыть его в браузере Google Chrome, вызвать инструменты
+              разработчика (нажатием клавиши <span>F12</span>) или кликнуть
+              правой кнопкой мыши на странице и выбрать пункт
+              <span>«Просмотреть код»</span>.
+            </p>
+            <p class="main-section-text">
+              Ниже на скриншоте отмечен стрелкой значок включенного режима
+              эмуляции. В верхней части браузера можно задать эмулируемое
+              разрешение.
+            </p>
+            <img
+              src="img/image19.svg"
+              alt="Включенный режим эмуляции"
+              class="main-section-img main-section-image-19-size"
+            />
+          </section>
+
           <section class="main-back-and-next">
             <form action="block2.html">
               <button class="header-menu-button-entrance">
