@@ -938,7 +938,7 @@ main {
   transition: 0.3s;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
   .burger-menu {
     display: block;
   }
